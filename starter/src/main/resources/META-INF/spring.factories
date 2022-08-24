@@ -1,0 +1,3 @@
+# Application Context Factories
+org.springframework.boot.ApplicationContextFactory=\
+com.github.nineteen.async.init.AsyncApplicationContextFactory
