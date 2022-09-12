@@ -23,7 +23,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.nineteen</groupId>
+    <groupId>io.github.1994</groupId>
     <modules>
         <module>test</module>
         <module>starter</module>

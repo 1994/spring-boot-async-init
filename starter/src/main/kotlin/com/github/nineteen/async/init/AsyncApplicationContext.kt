@@ -78,16 +78,6 @@ class WebReactiveAsyncApplicationContext : AnnotationConfigReactiveWebApplicatio
 
 class AsyncApplicationContext : AnnotationConfigApplicationContext(AsyncBeanFactory()) {
 
-    override fun getBeanFactoryPostProcessors(): MutableList<BeanFactoryPostProcessor> {
-        val asyncConfig = environment.getAsyncConfig()
-        val postProcessors = super.getBeanFactoryPostProcessors()
-        if (!asyncConfig.switch && !asyncConfig.postConstructSwitch) {
-            return postProcessors
-        }
-
-        return postProcessors
-    }
-
     override fun setEnvironment(environment: ConfigurableEnvironment) {
         super.setEnvironment(environment)
         addEnv()
