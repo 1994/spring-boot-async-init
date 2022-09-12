@@ -207,12 +207,12 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.github.nineteen</groupId>
+                <groupId>io.github.1994</groupId>
                 <artifactId>spring-boot-async-init-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.github.nineteen</groupId>
+                <groupId>io.github.1994</groupId>
                 <artifactId>spring-boot-async-init-test</artifactId>
                 <version>${project.version}</version>
                 <scope>test</scope>
