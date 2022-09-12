@@ -46,13 +46,6 @@
         <revision>1.0.0-SNAPSHOT</revision>
     </properties>
 
-    <!--    <repositories>-->
-    <!--        <repository>-->
-    <!--            <id>mavenCentral</id>-->
-    <!--            <url>https://repo1.maven.org/maven2/</url>-->
-    <!--        </repository>-->
-    <!--    </repositories>-->
-
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
@@ -124,12 +117,24 @@
                 </executions>
             </plugin>
             <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.2.1</version>
+                <version>3.2.1</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
+                        <phase>verify</phase>
                         <goals>
                             <goal>jar-no-fork</goal>
                         </goals>
@@ -139,7 +144,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9.1</version>
+                <version>3.4.1</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -152,7 +157,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.5</version>
+                <version>3.0.1</version>
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
@@ -160,6 +165,12 @@
                         <goals>
                             <goal>sign</goal>
                         </goals>
+                        <configuration>
+                            <gpgArguments>
+                                <arg>--pinentry-mode</arg>
+                                <arg>loopback</arg>
+                            </gpgArguments>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -207,12 +218,12 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>io.github.nineteen</groupId>
+                <groupId>io.github.1994</groupId>
                 <artifactId>spring-boot-async-init-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.github.nineteen</groupId>
+                <groupId>io.github.1994</groupId>
                 <artifactId>spring-boot-async-init-test</artifactId>
                 <version>${project.version}</version>
                 <scope>test</scope>
