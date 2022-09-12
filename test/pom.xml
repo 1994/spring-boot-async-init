@@ -3,11 +3,31 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>io.github.nineteen</groupId>
+        <groupId>io.github.1994</groupId>
         <artifactId>spring-boot-async-init</artifactId>
         <version>${revision}</version>
     </parent>
+    <packaging>jar</packaging>
     <modelVersion>4.0.0</modelVersion>
+
+    <name>spring-boot-async-init</name>
+    <description>a starter for asynchronous initialization of spring beans</description>
+    <url>https://github.com/1994/spring-boot-async-init</url>
+    <scm>
+        <connection>scm:git:git://github.com/1994/spring-boot-async-init.git</connection>
+        <developerConnection>scm:git:ssh://github.com/1994/spring-boot-async-init.git</developerConnection>
+        <url>https://github.com/1994/spring-boot-async-init</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>1994</name>
+            <email>1994@users.noreply.github.com</email>
+            <organization>Sonatype</organization>
+            <organizationUrl>http://www.sonatype.com</organizationUrl>
+        </developer>
+    </developers>
+
 
     <artifactId>spring-boot-async-init-test</artifactId>
 
@@ -18,7 +38,7 @@
             <version>2.7.3</version>
         </dependency>
         <dependency>
-            <groupId>io.github.nineteen</groupId>
+            <groupId>io.github.1994</groupId>
             <artifactId>spring-boot-async-init-starter</artifactId>
         </dependency>
     </dependencies>
