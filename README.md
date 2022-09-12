@@ -18,9 +18,9 @@ spring bean默认是单线程同步初始化的，如果你的应用中含有大
 ```xml
 
 <dependency>
-    <groupId>io.github.nineteen</groupId>
+    <groupId>io.github.1994</groupId>
     <artifactId>spring-boot-async-init-starter</artifactId>
-    <version>仓库还在申请中</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
@@ -45,9 +45,9 @@ spring boot 2.4.0以下版本需要手动设置ApplicationContext，参考：
 ```xml
 
 <dependency>
-    <groupId>io.github.nineteen</groupId>
+    <groupId>io.github.1994</groupId>
     <artifactId>spring-boot-async-init-test</artifactId>
-    <version>仓库还在申请中</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
