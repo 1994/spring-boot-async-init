@@ -7,6 +7,22 @@
         <artifactId>spring-boot-async-init</artifactId>
         <version>${revision}</version>
     </parent>
+
+    <name>spring-boot-async-init</name>
+    <description>a starter for asynchronous initialization of spring beans</description>
+    <url>https://github.com/1994/spring-boot-async-init</url>
+    <scm>
+        <connection>scm:git:git://github.com/1994/spring-boot-async-init.git</connection>
+        <url>https://github.com/1994/spring-boot-async-init</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>1994</name>
+        </developer>
+    </developers>
+
+
     <packaging>jar</packaging>
     <modelVersion>4.0.0</modelVersion>
 
