@@ -3,7 +3,10 @@
 spring bean默认是单线程同步初始化的，如果你的应用中含有大量初始化耗时的bean，会造成启动特别慢。
 使用这个starter可以支持bean异步初始化，从而加速启动spring boot应用
 
-## 使用限制
+## 适用场景
+适用于spring boot应用，解决由于bean初始化较慢导致的应用启动过慢问题`
+
+## 不适用的场景
 
 并不是所有的bean是适合异步初始化的，以下两类bean是没有必要异步初始化：
 
@@ -14,13 +17,13 @@ spring bean默认是单线程同步初始化的，如果你的应用中含有大
 ## 使用说明
 
 在Application启动类模块下加入
-
+`
 ```xml
 
 <dependency>
     <groupId>io.github.1994</groupId>
     <artifactId>spring-boot-async-init-starter</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
@@ -47,7 +50,7 @@ spring boot 2.4.0以下版本需要手动设置ApplicationContext，参考：
 <dependency>
     <groupId>io.github.1994</groupId>
     <artifactId>spring-boot-async-init-test</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 

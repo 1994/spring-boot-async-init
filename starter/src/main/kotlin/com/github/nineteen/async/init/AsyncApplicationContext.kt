@@ -72,7 +72,7 @@ class WebReactiveAsyncApplicationContext : AnnotationConfigReactiveWebApplicatio
 
     override fun finishRefresh() {
         asyncAwait()
-        super.refresh()
+        super.finishRefresh()
     }
 }
 
@@ -85,7 +85,7 @@ class AsyncApplicationContext : AnnotationConfigApplicationContext(AsyncBeanFact
 
     override fun finishRefresh() {
         asyncAwait()
-        super.refresh()
+        super.finishRefresh()
     }
 }
 
@@ -193,13 +193,7 @@ fun AsyncBeanFactory.isSyncBean(beanName: String, bean: Any, mbd: RootBeanDefini
 
 fun AsyncBeanFactory.isAsyncBean(beanName: String, bean: Any, mbd: RootBeanDefinition?): Boolean {
     val asyncConfig = environment.getAsyncConfig()
-    if (!asyncConfig.switch) {
-        return false
-    }
-    val beanClassName = mbd?.beanClassName
-    return asyncConfig.asyncBasePackage?.any {
-        beanClassName?.contains(it, ignoreCase = true) == true || (bean.javaClass.canonicalName.startsWith(it))
-    } == true
+    return asyncConfig.isAsyncBean(beanName, bean)
 }
 
 class AsyncInitAnnotationBeanPostProcessor(private val asyncInitConfig: AsyncInitConfig) :
