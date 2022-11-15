@@ -4,7 +4,7 @@ spring bean默认是单线程同步初始化的，如果你的应用中含有大
 使用这个starter可以支持bean异步初始化，从而加速启动spring boot应用
 
 ## 适用场景
-适用于spring boot应用，解决由于bean初始化较慢导致的应用启动过慢问题`
+适用于spring boot应用，解决由于bean初始化较慢导致的应用启动过慢问题
 
 ## 不适用的场景
 
