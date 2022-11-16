@@ -17,7 +17,7 @@ spring bean默认是单线程同步初始化的，如果你的应用中含有大
 ## 使用说明
 
 在Application启动类模块下加入
-`
+
 ```xml
 
 <dependency>
